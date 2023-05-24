@@ -1,14 +1,19 @@
 import Head from 'next/head';
 import React from 'react';
-import { AppBar } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography } from '@mui/material';
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <div>
       <Head>
         <title>Little Girls Clothes</title>
       </Head>
-      <AppBar position="static"></AppBar>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography>Little Girls Clothes</Typography>
+        </Toolbar>
+      </AppBar>
+      <Container>{children}</Container>
     </div>
   );
 }
